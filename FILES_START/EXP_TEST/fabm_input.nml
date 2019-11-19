@@ -1,0 +1,53 @@
+!              !  file name   ! frequency (hours) ! variable  ! time interp. !  clim  ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
+!              !              !  (if <0  months)  !   name    !   (logical)  !  (T/F) ! 'monthly' ! filename ! pairing  ! filename      !
+!&variable
+!   name='mole_fraction_of_carbon_dioxide_in_air'
+!   sn=         'AMM7-pCO2a',-1,            'pCO2a', .true.,  .false.,   'yearly',     '',         '',        ''
+!/
+&variable
+   name='gelbstoff_absorption_satellite'
+   sn=         '/work/n01/n01/annkat/SEAsia_ERSEM_CMEMS/FAKE_BGC/SEAsia_junk_ADY-broadband',192,            'gelbstoff_absorption_satellite', .true.,  .true.,   'yearly',     '',         '',        ''
+/
+&variable
+   name='N3_flux/flux'
+   sn=         '/work/n01/n01/annkat/SEAsia_ERSEM_CMEMS/FAKE_BGC/SEAsia-junk-NDeposition.nc',-12,            'N3_flux', .true.,  .true.,   'yearly',     '',         '',        ''
+/
+&variable
+   name='N4_flux/flux'
+   sn=         '/work/n01/n01/annkat/SEAsia_ERSEM_CMEMS/FAKE_BGC/SEAsia-junk-NDeposition.nc',-12,            'N4_flux', .true.,  .true.,   'yearly',     '',         '',        ''
+/
+!&riverdata
+!   name='N3_n'
+!   sn=         'rivers',24,            'rono3', .false.,  .true.,   'yearly',     '',         '',        ''
+!   rfac=71.4 ! 1000./14.0067 (g/s -> mmol/s)
+!/
+!&riverdata
+!   name='N4_n'
+!   sn=         'rivers',24,            'ronh4', .false.,  .true.,   'yearly',     '',         '',        ''
+!   rfac=71.4 ! 1000./14.0067 (g/s -> mmol/s)
+!/
+!&riverdata
+!   name='N1_p'
+!   sn=         'rivers',24,            'rop', .false.,  .true.,   'yearly',     '',         '',        ''
+!   rfac=32.3 ! 1000./30.9738 (g/s -> mmol/s)
+!/
+!&riverdata
+!   name='N5_s'
+!   sn=         'rivers',24,            'rosio2', .false.,  .true.,   'yearly',     '',         '',        ''
+!   rfac=35.6 ! 1000./28.0855 (g/s -> mmol/s)
+!/
+!&riverdata
+!   name='O3_c'
+!   sn=         'rivers',24,            'rodic', .false.,  .true.,   'yearly',     '',         '',        ''
+!   rfac=83.3 ! 1000./12.011 (g/s -> mmol/s)
+!/
+!&riverdata
+!   name='O2_o'
+!   sn=         'rivers',24,            'roo', .false.,  .true.,   'yearly',     '',         '',        ''
+!   rfac=62.5 ! 1000./15.9994 (g/s -> mmol/s)
+!/
+!&riverdata
+!   name='O3_bioalk'
+!   sn=         'rivers',24,            'robioalk', .false.,  .true.,   'yearly',     '',         '',        ''
+!   rfac=0.00098 ! 1./1020. (umol/s -> umol/s*m3/kg)
+!/
