@@ -6,7 +6,7 @@ module load nco/4.5.0
 
 #download the copernicus data (here we have already downloaded them in livljobs
 #for the OBC and take it from there)
-cp $GITCLONE/FILES_START/IC/CMEMS_2017_01_01_download.nc CMEMS_2017_01_01_download.nc
+cp $GITCLONE/IC/CMEMS_2017_01_01_download.nc CMEMS_2017_01_01_download.nc
 
 #####################################################################
 ###############Flooding/fixing original CMEMS files
@@ -20,8 +20,8 @@ ncap2 -O -s 'where(thetao <-100.) thetao=0' CMEMS_2017_01_01_download.nc CMEMS_2
 
 #flood fields before anything
 #copy namelists
-cp $GITCLONE/FILES_START/IC/initcd_votemper_orig.namelist $ICS/initcd_votemper_orig.namelist
-cp $GITCLONE/FILES_START/IC/initcd_vosaline_orig.namelist $ICS/initcd_vosaline_orig.namelist
+cp $GITCLONE/IC/initcd_votemper_orig.namelist $ICS/initcd_votemper_orig.namelist
+cp $GITCLONE/IC/initcd_vosaline_orig.namelist $ICS/initcd_vosaline_orig.namelist
 #change namelist (you may want to ensure manually namelist correct)
 #sed -i "s/l_reg_trg  = F/l_reg_trg  = T/g" initcd_votemper_orig.namelist
 #sed -i "s/l_reg_trg  = F/l_reg_trg  = T/g" initcd_vosaline_orig.namelist
@@ -37,7 +37,7 @@ ncrename -v so,mask CMEMS_mask.nc
 #$WORK/Install_sosie.sh
 
 #sosie flooding
-cp $GITCLONE/FILES_START/IC/job_sosie_orig_CMEMS.sh $ICS/job_sosie_orig_CMEMS.sh
+cp $GITCLONE/IC/job_sosie_orig_CMEMS.sh $ICS/job_sosie_orig_CMEMS.sh
 #ATTENTION modify job for sossie paths etc.
 qsub -q serial job_sosie_orig_CMEMS.sh
 cp job_sosie_orig_CMEMS.sh job_sosie_orig_CMEMS_sal.sh
@@ -59,8 +59,8 @@ module load cray-hdf5-parallel/1.10.0.1
 module swap PrgEnv-cray PrgEnv-intel/5.2.82
 
 #copy the namelists
-cp $GITCLONE/FILES_START/IC/namelist_reshape_bilin_initcd_votemper $ICS/.
-cp $GITCLONE/FILES_START/IC/namelist_reshape_bilin_initcd_vosaline $ICS/.
+cp $GITCLONE/IC/namelist_reshape_bilin_initcd_votemper $ICS/.
+cp $GITCLONE/IC/namelist_reshape_bilin_initcd_vosaline $ICS/.
 #change the namelist as you want 
 #sed -i 's/ORCA0083-N06_19600105d05T_SEAsia_grid_T.nc/thetao_CMEMS_2017_01_01_download.nc-SEAsia_2017.nc/g' namelist_reshape_bilin_initcd_votemper
 #sed -i 's/ORCA0083-N06_19600105d05T_SEAsia_grid_T.nc/so_CMEMS_2017_01_01_download.nc-SEAsia_2017.nc/g' namelist_reshape_bilin_initcd_vosaline
@@ -83,8 +83,8 @@ ncap2 -O -s 'where(vosaline >=25.) vosaline=1' sosie_initcd_mask.nc sosie_initcd
 ncrename -v vosaline,mask sosie_initcd_mask.nc
 
 #interpolation: flood and vertical interpolate using sosie tool
-cp $GITCLONE/FILES_START/IC/initcd_votemper.namelist $ICS/initcd_votemper.namelist
-cp $GITCLONE/FILES_START/IC/initcd_vosaline.namelist $ICS/initcd_vosaline.namelist
+cp $GITCLONE/IC/initcd_votemper.namelist $ICS/initcd_votemper.namelist
+cp $GITCLONE/IC/initcd_vosaline.namelist $ICS/initcd_vosaline.namelist
 
 #change the namelist (manually too if you have to check/ensure changes)
 #sed -i 's/idrown   = 5,5,.false./idrown   = 300,0,.false./g' initcd_vosaline.namelist
@@ -97,7 +97,7 @@ module swap PrgEnv-cray PrgEnv-intel/5.2.82
 
 #Sossie to flood and vertical interpolate to have the same
 #vertical levels with the model
-cp $GITCLONE/FILES_START/IC/job_sosie_CMEMS.sh $ICS/job_sosie_CMEMS.sh
+cp $GITCLONE/IC/job_sosie_CMEMS.sh $ICS/job_sosie_CMEMS.sh
 #ATTENTION modify job for sossie paths etc.
 qsub -q serial job_sosie_CMEMS.sh
 /home/n01/n01/annkat/local/bin/sosie3.x -f initcd_vosaline.namelist
