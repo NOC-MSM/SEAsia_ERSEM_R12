@@ -1,4 +1,4 @@
-export CONFIG=SEAsia_ERSEM_CMEMS
+export CONFIG=SEAsia_ERSEM_R12
 export WORK=/work/n01/n01/annkat
 export AWORK=/work/n01/n01/annkat
 export WDIR=$WORK/$CONFIG
@@ -13,7 +13,7 @@ export TDIR=$NEMO/trunk_NEMOGCM_r8395/TOOLS
 export RUND=$WDIR/RUN_DIRECTORY
 export EXP=$RUND/EXP_TEST
 export XIOS_DIR=$WDIR/xios-2.5
-export GITCLONE=$WORK/SEAsia-master
+export GITCLONE=$WDIR/FILES_START
 export RIVER=$WDIR/RIVERS
 export FABM=$WDIR/NEMO_fabm
 
