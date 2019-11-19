@@ -116,7 +116,7 @@ rm tmp.nc
 #create mask that corresponds to the new fields
 ncks -d time_counter,0,0,1 -v vosaline vosaline_CMEMS-GLOBAL_ANALYSIS_FORECAST_PHY_001_024-SEAsia_2017.nc initcd_mask.nc
 ncap2 -O -s 'where(vosaline<25.) vosaline=0' initcd_mask.nc initcd_mask.nc
-ncap2 -O -s 'where(vosaline >0.) vosaline=1' initcd_mask.nc initcd_mask.nc
+ncap2 -O -s 'where(vosaline >=25.) vosaline=1' initcd_mask.nc initcd_mask.nc
 ncrename -v vosaline,mask initcd_mask.nc
 ############################################################################################
 
