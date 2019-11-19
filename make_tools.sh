@@ -3,8 +3,8 @@ cd $TDIR
 #copy ARCH files that need old version of xios (tools sometimes do not work with new version)
 #but you can try. For the XIOS1 to work you need access to jelt xios.1 or else you will have to 
 #download and compile this xios version
-cp $GITCLONE/FILES_START/NEMO-FABM-ERSM/arch-XC_ARCHER_INTEL_NOXIOS.fcm ../ARCH/.
-cp $GITCLONE/FILES_START/NEMO-FABM-ERSM//arch-XC_ARCHER_INTEL_XIOS1.fcm  ../ARCH/.
+cp $GITCLONE/NEMO-FABM-ERSM/arch-XC_ARCHER_INTEL_NOXIOS.fcm ../ARCH/.
+cp $GITCLONE/NEMO-FABM-ERSM//arch-XC_ARCHER_INTEL_XIOS1.fcm  ../ARCH/.
 
 #patch for the weight files
 cd $TDIR/WEIGHTS/src
