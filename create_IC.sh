@@ -6,7 +6,7 @@ module load nco/4.5.0
 
 #download the copernicus data (here we have already downloaded them in livljobs
 #for the OBC and take it from there)
-cp $GITCLONE/IC/CMEMS_2017_01_01_download.nc CMEMS_2017_01_01_download.nc
+cp /work/n01/n01/annkat/EXTRA_TOOLS/CMEMS_2017_01_01_download.nc CMEMS_2017_01_01_download.nc
 
 #####################################################################
 ###############Flooding/fixing original CMEMS files
