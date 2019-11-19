@@ -9,7 +9,7 @@ cd sosie
 
 # you may need to edit the path in this file
 # to add the directory to install binaries
-cp $GITCLONE/FILES_START/IC/make.macro make.macro
+cp $GITCLONE/IC/make.macro make.macro
 
 make
 make install
