@@ -8,8 +8,8 @@ module load cray-hdf5-parallel
 
 # subdomain of ORCA global
 #you can download the ORCA R12 coordinates or in ARCHER you can take it from my directory
-#ln -s /work/n01/n01/annkat/EXTRA_TOOLS/GRIDS/coordinates_ORCA_R12.nc $TDIR/NESTING/.
-cp $GITCLONE/FILES_START/DOMAIN/namelist.input $TDIR/NESTING/
+cp /work/n01/n01/annkat/EXTRA_TOOLS/GRIDS/coordinates_ORCA_R12.nc $TDIR/NESTING/.
+cp $GITCLONE/DOMAIN/namelist.input $TDIR/NESTING/
 
 ./agrif_create_coordinates.exe
 
