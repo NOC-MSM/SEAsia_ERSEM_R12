@@ -1,4 +1,3 @@
-mkdir $WDIR
 mkdir $SBC
 mkdir $TIDE
 mkdir $OBC
