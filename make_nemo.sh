@@ -8,10 +8,10 @@ svn co http://forge.ipsl.jussieu.fr/nemo/svn/trunk/NEMOGCM@8395 trunk_NEMOGCM_r8
 #replace TOP_SRC_old
 mv trunk_NEMOGCM_r8395/NEMO/TOP_SRC trunk_NEMOGCM_r8395/NEMO/TOP_SRC_old
 #original NEMO-FABM coupler can be found form here: https://github.com/NOC-MSM/NEMO_ERSEM/tree/master/TOP_SRC_r8395_FABM 
-cp -r $GITCLONE/FILES_START/NEMO-FABM-ERSM/TOP_SRC_r8395_FABM trunk_NEMOGCM_r8395/NEMO/TOP_SRC
+cp -r $GITCLONE/NEMO-FABM-ERSM/TOP_SRC_r8395_FABM trunk_NEMOGCM_r8395/NEMO/TOP_SRC
 
 # get ERSM
-cp -r $GITCLONE/FILES_START/NEMO-FABM-ERSM/ERSEM-master ./
+cp -r $GITCLONE/NEMO-FABM-ERSM/ERSEM-master ./
 
 cd $FABM
 # get FABM
@@ -51,8 +51,8 @@ printf 'y\nn\nn\ny\nn\nn\nn\nn\n' |./makenemo -m XC_ARCHER_INTEL_FABM -n $CONFIG
 
 #changes the keys and copy MY_SRC to your configurations
 cd $CONFIG
-cp $GITCLONE/FILES_START/NEMO-FABM-ERSM/cpp_SEAsia_FABM.fcm cpp_$CONFIG.fcm
-cp -r -f $GITCLONE/FILES_START/NEMO-FABM-ERSM/MY_SRC ./
+cp $GITCLONE/NEMO-FABM-ERSM/cpp_SEAsia_FABM.fcm cpp_$CONFIG.fcm
+cp -r -f $GITCLONE/NEMO-FABM-ERSM/MY_SRC ./
 
 #add fabm and ERSEM options in compiler (you can add or just copy the file)
 #in bldxag.cfg add
@@ -62,7 +62,7 @@ cp -r -f $GITCLONE/FILES_START/NEMO-FABM-ERSM/MY_SRC ./
 #bld::excl_dep        use::fabm_driver
 #bld::excl_dep        use::fabm_version
 #OR instead take the ready file
-cp $GITCLONE/FILES_START/NEMO-FABM-ERSM/bldxag_FABM.cfg $NEMO/trunk_NEMOGCM_r8395/TOOLS/COMPILE/bldxag.cfg
+cp $GITCLONE/NEMO-FABM-ERSM/bldxag_FABM.cfg $NEMO/trunk_NEMOGCM_r8395/TOOLS/COMPILE/bldxag.cfg
 
 #make configuration with updates included 
 cd $CDIR
