@@ -15,7 +15,7 @@ svn checkout -r 1566 http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/branchs/xios
 cd $XIOS_DIR
 
 #copy the arch
-cp $GITCLONE/FILES_START/XIOS/arch-XC30_ARCHER* arch/.
+cp $GITCLONE/XIOS/arch-XC30_ARCHER* arch/.
 
 #compile xios
 ./make_xios  --arch XC30_ARCHER --full --job 4
