@@ -7,7 +7,7 @@ module load cray-netcdf-hdf5parallel
 module load cray-hdf5-parallel
 
 #copy the namelist (and change it if necessery)
-cp $GITCLONE/FILES_START/DOMAIN/namelist_reshape_bilin_gebco $DOMAIN
+cp $GITCLONE/DOMAIN/namelist_reshape_bilin_gebco $DOMAIN
 
 #create the bathymetry
 $TDIR/WEIGHTS/scripgrid.exe namelist_reshape_bilin_gebco
