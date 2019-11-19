@@ -34,7 +34,7 @@ ncap2 -O -s 'where(so >=25.) so=1' CMEMS_mask.nc CMEMS_mask.nc
 ncrename -v so,mask CMEMS_mask.nc
 
 #first time you are doing it install sosie
-#$WORK/Install_sosie.sh
+#$WDIR/Install_sosie.sh
 
 #sosie flooding
 cp $GITCLONE/IC/job_sosie_orig_CMEMS.sh $ICS/job_sosie_orig_CMEMS.sh
