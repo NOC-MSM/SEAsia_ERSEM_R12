@@ -8,11 +8,11 @@ cp $GITCLONE/NEMO-FABM-ERSM//arch-XC_ARCHER_INTEL_XIOS1.fcm  ../ARCH/.
 
 #patch for the weight files
 cd $TDIR/WEIGHTS/src
-patch -b < $GITCLONE/FILES_START/NEMO-FABM-ERSM/patch_files/scripinterp_mod.patch
-patch -b < $GITCLONE/FILES_START/NEMO-FABM-ERSM/patch_files/scripinterp.patch
-patch -b < $GITCLONE/FILES_START/NEMO-FABM-ERSM/patch_files/scrip.patch
-patch -b < $GITCLONE/FILES_START/NEMO-FABM-ERSM/patch_files/scripshape.patch
-patch -b < $GITCLONE/FILES_START/NEMO-FABM-ERSM/patch_files/scripgrid.patch
+patch -b < $GITCLONE/NEMO-FABM-ERSM/patch_files/scripinterp_mod.patch
+patch -b < $GITCLONE/NEMO-FABM-ERSM/patch_files/scripinterp.patch
+patch -b < $GITCLONE/NEMO-FABM-ERSM/patch_files/scrip.patch
+patch -b < $GITCLONE/NEMO-FABM-ERSM/patch_files/scripshape.patch
+patch -b < $GITCLONE/NEMO-FABM-ERSM/patch_files/scripgrid.patch
 
 #load modules
 module unload nco cray-netcdf cray-hdf5
