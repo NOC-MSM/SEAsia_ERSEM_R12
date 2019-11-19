@@ -7,14 +7,14 @@ module load cray-hdf5-parallel/1.10.0.1
 module swap PrgEnv-cray PrgEnv-intel/5.2.82
 
 #take namelist (!!modify it if necessary) 
-cp $GITCLONE/FILES_START/DOMAIN/namelist_cfg $TDIR/DOMAINcfg/namelist_cfg
+cp $GITCLONE/DOMAIN/namelist_cfg $TDIR/DOMAINcfg/namelist_cfg
 
 #link coordinates and bathymeter
 ln -s $DOMAIN/coordinates.nc $TDIR/DOMAINcfg/.
 ln -s $DOMAIN/bathy_meter_gebco.nc $TDIR/DOMAINcfg/bathy_meter.nc
 
 #copy file for z-s hybrid namdom
-cp $GITCLONE/FILES_START/DOMAIN/domzgr_jelt_changes.f90 $TDIR/DOMAINcfg/src/domzgr.f90
+cp $GITCLONE/DOMAIN/domzgr_jelt_changes.f90 $TDIR/DOMAINcfg/src/domzgr.f90
 
 cd $TDIR
 
@@ -29,7 +29,7 @@ cd $TDIR/DOMAINcfg
 
 #you have to submit the domain creation as a job so copy the jobs script and 
 # modify accordingly 
-cp $GITCLONE/FILES_START/DOMAIN/job_create.sh $TDIR/DOMAINcfg/job_create.sh
+cp $GITCLONE/DOMAIN/job_create.sh $TDIR/DOMAINcfg/job_create.sh
 qsub -q short job_create.sh
 
 #after create copy it and store it for durther use
