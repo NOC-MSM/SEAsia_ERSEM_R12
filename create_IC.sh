@@ -66,7 +66,7 @@ cp $GITCLONE/IC/namelist_reshape_bilin_initcd_vosaline $ICS/.
 #sed -i 's/ORCA0083-N06_19600105d05T_SEAsia_grid_T.nc/so_CMEMS_2017_01_01_download.nc-SEAsia_2017.nc/g' namelist_reshape_bilin_initcd_vosaline
 
 #interpolation: creates weights and remaps 
-ln -s $DOMAIN/domain_cfg_gebco.nc $ICS/.
+ln -s $DOMAIN/domain_cfg_ORCA12.nc $ICS/.
 $TDIR/WEIGHTS/scripgrid.exe namelist_reshape_bilin_initcd_votemper
 $TDIR/WEIGHTS/scrip.exe namelist_reshape_bilin_initcd_votemper
 $TDIR/WEIGHTS/scripinterp.exe namelist_reshape_bilin_initcd_votemper
