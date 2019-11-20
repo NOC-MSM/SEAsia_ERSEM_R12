@@ -2,18 +2,18 @@
  -----------------------------------------------------------------------------------
  - grid_inputs holds parameters for the scripgrid routine which reformats information 
    about the input grids
- - scripgrid always needs a domain_cfg_gebco.nc file in the
+ - scripgrid always needs a domain_cfg.nc file in the
    current directory and creates the remapped grid file correspondingly
  - it uses the following namelist block to determine its actions
      method:  only 'regular' is yet implemented, this assumes a cartesian grid
      input_lon: name of longitude variable in the input_file
      input_lat: name of latitude variable in the input_file
-     nemo_lon: name of longitude variable in the domain_cfg_gebco.nc
-     nemo_lat: name of latitude variable in the domain_cfg_gebco.nc
+     nemo_lon: name of longitude variable in the domain_cfg.nc
+     nemo_lat: name of latitude variable in the domain_cfg.nc
 /
 &grid_inputs
     input_file = 'thetao_CMEMS_2017_01_01_download.nc-SEAsia_2017.nc'
-    nemo_file = 'domain_cfg_gebco.nc'
+    nemo_file = 'domain_cfg_ORCA12.nc'
     datagrid_file = 'remap_data_grid_R12.nc'
     nemogrid_file = 'remap_nemo_grid_R12.nc'
     method = 'regular'
