@@ -13,9 +13,9 @@ cp $GITCLONE/DOMAIN/eORCA12_bathymetry_v2.4.nc $DOMAIN
 cp $GITCLONE/DOMAIN/namelist_reshape_bilin_eORCA12 $DOMAIN
 
 #create the bathymetry
-$TDIR/WEIGHTS/scripgrid.exe namelist_reshape_bilin_gebco
-$TDIR/WEIGHTS/scrip.exe namelist_reshape_bilin_gebco
-$TDIR/WEIGHTS/scripinterp.exe namelist_reshape_bilin_gebco
+$TDIR/WEIGHTS/scripgrid.exe namelist_reshape_bilin_eORCA12
+$TDIR/WEIGHTS/scrip.exe namelist_reshape_bilin_eORCA12
+$TDIR/WEIGHTS/scripinterp.exe namelist_reshape_bilin_eORCA12
 
 #load nco modules
 module unload cray-netcdf-hdf5parallel cray-hdf5-parallel
