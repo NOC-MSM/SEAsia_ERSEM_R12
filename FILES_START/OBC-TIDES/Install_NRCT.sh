@@ -1,5 +1,4 @@
 #Install NRCT
-export CONFIG=SEAsia_R12
 export WORK=/work/annkat
 export PYTHON=$WORK/nrct/Python
 cd $WORK
