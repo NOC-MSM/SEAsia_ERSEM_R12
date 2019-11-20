@@ -17,8 +17,7 @@ conda install -c https://conda.anaconda.org/srikanthnagella thredds_crawler
 conda install -c https://conda.anaconda.org/srikanthnagella pyjnius
 
 #find and set the java path
-#/usr/lib/jvm/jre-1.7.0-openjdk.x86_64/lib/amd64/server/libjvm.so
-export LD_LIBRARY_PATH=/usr/lib/jvm/jre-1.7.0-openjdk.x86_64/lib/amd64/server:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/lib/jvm/jre-1.7.0-openjdk-1.7.0.241-2.6.20.0.el7_7.x86_64/lib/amd64/server:$LD_LIBRARY_PATH
 unset SSH_ASKPASS 
 
 # obtain the tool from git repository
