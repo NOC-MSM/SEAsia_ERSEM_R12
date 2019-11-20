@@ -1,8 +1,6 @@
 #Install NRCT
 export CONFIG=SEAsia_R12
-export WOUT=/projectsa/accord/$CONFIG
 export WORK=/work/annkat
-export OBC=$WOUT/OPEN_BOUNDARIES
 export PYTHON=$WORK/nrct/Python
 cd $WORK
 
