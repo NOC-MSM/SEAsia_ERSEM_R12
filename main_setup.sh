@@ -11,8 +11,8 @@ echo "Compiling various grid tools"
 . ./make_tools.sh                                >> main_output.txt 2>&1
 echo "Creating coordinate file"
 . ./create_coordinates.sh                        >> main_output.txt 2>&1
-echo "Interpolating bathymetry on to our domain"
-. ./interpolate_bathymetry.sh                         >> main_output.txt 2>&1
+echo "Get bathymetry for our domain"
+. ./get_bathymetry.sh                         >> main_output.txt 2>&1
 echo "Create rivers"
 . ./create_rivers.sh                            >> main_output.txt 2>&1
 echo "Create domain file"
