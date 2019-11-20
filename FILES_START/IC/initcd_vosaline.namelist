@@ -150,7 +150,7 @@ cv_lat_trg = 'y'
 cf_lsm_trg = ''
 cv_lsm_trg = ''
 ewper_trg  = -1
-cf_z_trg   = 'domain_cfg_gebco.nc'
+cf_z_trg   = 'domain_cfg_ORCA12.nc'
 cv_z_trg   = 'nav_lev'
 ctype_z_trg= 'z'
 /
