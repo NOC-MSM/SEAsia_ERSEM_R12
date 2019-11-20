@@ -11,7 +11,7 @@ cp $GITCLONE/DOMAIN/namelist_cfg $TDIR/DOMAINcfg/namelist_cfg
 
 #link coordinates and bathymeter
 ln -s $DOMAIN/coordinates.nc $TDIR/DOMAINcfg/.
-ln -s $DOMAIN/bathy_meter_gebco.nc $TDIR/DOMAINcfg/bathy_meter.nc
+ln -s $DOMAIN/bathy_meter_ORCA12.nc $TDIR/DOMAINcfg/bathy_meter.nc
 
 #copy file for z-s hybrid namdom
 cp $GITCLONE/DOMAIN/domzgr_jelt_changes.f90 $TDIR/DOMAINcfg/src/domzgr.f90
@@ -33,7 +33,7 @@ cp $GITCLONE/DOMAIN/job_create.sh $TDIR/DOMAINcfg/job_create.sh
 qsub -q short job_create.sh
 
 #after create copy it and store it for durther use
-cp $TDIR/DOMAINcfg/domain_cfg.nc $DOMAIN/domain_cfg_gebco.nc
+cp $TDIR/DOMAINcfg/domain_cfg.nc $DOMAIN/domain_cfg_ORCA12.nc
 
 cd $WORK
 
