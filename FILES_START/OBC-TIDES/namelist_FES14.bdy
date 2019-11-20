@@ -32,10 +32,10 @@
 !-----------------------------------------------------------------------
    sn_src_hgr = '/projectsa/accord/SEAsia_CMEMS/CMEMS/CMEMS_subdomain_coordinates.nc'   !  parent /grid/
    sn_src_zgr = './inputs_src_zgr.ncml'   !  parent
-   sn_dst_hgr = './domain_cfg_gebco.nc'
+   sn_dst_hgr = './domain_cfg_ORCA12.nc'
    sn_dst_zgr = './inputs_dst.ncml' ! rename output variables
    sn_src_msk = '/projectsa/accord/SEAsia_CMEMS/CMEMS/CMEMS_subdomain_mask.nc'       ! parent
-   sn_bathy   = './bathy_meter_gebco.nc'        ! child
+   sn_bathy   = './bathy_meter_ORCA12.nc'        ! child
 
 !-----------------------------------------------------------------------
 !  I/O 
