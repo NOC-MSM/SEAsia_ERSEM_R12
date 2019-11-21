@@ -68,7 +68,7 @@ cp $GITCLONE/NEMO-FABM-ERSM/bldxag_FABM.cfg $NEMO/trunk_NEMOGCM_r8395/TOOLS/COMP
 
 #make configuration with updates included 
 cd $CDIR
-./makenemo -n $CONFIG -m XC_ARCHER_INTEL_FABM  -j 10 clean
-./makenemo -m XC_ARCHER_INTEL_FABM -n $CONFIG -j 10
+./makenemo -n $CONFIG -m XC_ARCHER_INTEL_FABM  -j 4 clean
+./makenemo -m XC_ARCHER_INTEL_FABM -n $CONFIG -j 4
 #################################################################
 cd $WORK
