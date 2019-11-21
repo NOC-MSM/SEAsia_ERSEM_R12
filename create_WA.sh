@@ -10,8 +10,8 @@ module load cray-hdf5-parallel/1.10.0.1
 module swap PrgEnv-cray PrgEnv-intel/5.2.82
 
 #obtain namelists
-cp $GITCLONE/FILES_START/ATMOS_FORCING/namelist_reshape_bicubic_atmos $SBC/.
-cp $GITCLONE/FILES_START/ATMOS_FORCING/namelist_reshape_bilin_atmos $SBC/.
+cp $GITCLONE/ATMOS_FORCING/namelist_reshape_bicubic_atmos $SBC/.
+cp $GITCLONE/ATMOS_FORCING/namelist_reshape_bilin_atmos $SBC/.
 
 #changes in the namelists manually if you have too
 #sed -i 's,ERA5_MSL_y2017.nc,/work/n01/n01/annkat/SEAsia_ERSEM_CMEMS/SURFACE_FORCING/ERA5_MSDWLWRF_y2017.nc,g' namelist_reshape_bilin_atmos
