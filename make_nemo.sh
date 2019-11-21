@@ -32,7 +32,7 @@ module load cmake
 
 cd $FABM
 
-cmake $FABM/fabm/src -DFABM_HOST=nemo -DCMAKE_Fortran_COMPILER=ifort -DFABM_ERSEM_BASE=$WDIR/ERSEM-master -DFABM_EMBED_VERSION=ON
+cmake $FABM/fabm/src -DFABM_HOST=nemo -DCMAKE_Fortran_COMPILER=ifort -DFABM_ERSEM_BASE=$NEMO/ERSEM-master -DFABM_EMBED_VERSION=ON
 
 make install
 cp -r /home/n01/n01/$user/local/fabm/nemo/lib ./
