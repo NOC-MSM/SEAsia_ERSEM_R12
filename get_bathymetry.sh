@@ -7,7 +7,7 @@ module load cray-netcdf-hdf5parallel
 module load cray-hdf5-parallel
 
 #cp or download bathymetry from the ORCA 12 global
-cp $GITCLONE/DOMAIN/eORCA12_bathymetry_v2.4.nc $DOMAIN
+cp /work/n01/n01/annkat/EXTRA_TOOLS/BATH/eORCA12_bathymetry_v2.4.nc $DOMAIN
 
 #copy the namelist (and change it if necessery)
 cp $GITCLONE/DOMAIN/namelist_reshape_bilin_eORCA12 $DOMAIN
