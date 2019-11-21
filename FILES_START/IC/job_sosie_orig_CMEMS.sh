@@ -17,7 +17,7 @@ make
 make install
 
 #set up paths
-cd /work/n01/n01/annkat/SEAsia_ERSEM_CMEMS/INITIAL_CONDITIONS/
+cd /work/n01/n01/annkat/SEAsia_ERSEM_R12/INITIAL_CONDITIONS/
 
 /home/n01/n01/annkat/local/bin/sosie3.x -f initcd_votemper_orig.namelist
 
