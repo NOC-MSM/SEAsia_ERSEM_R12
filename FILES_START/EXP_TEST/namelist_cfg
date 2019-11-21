@@ -72,7 +72,7 @@
 !-----------------------------------------------------------------------
    ln_read_cfg = .true.   !  (=T) read the domain configuration file
       !                   !  (=F) user defined configuration  ==>>>  see usrdef(_...) modules
-      cn_domcfg = "domain_cfg_gebco.nc"         ! domain configuration filename
+      cn_domcfg = "domain_cfg_ORCA12"         ! domain configuration filename
       !!!!!!annkat ATTENTION in the domain_cfg do not include .nc 
    ln_write_cfg= .false.   !  (=T) create the domain configuration file
       cn_domcfg_out = "domain_cfg_out" ! newly created domain configuration filename
@@ -633,13 +633,13 @@
 !-----------------------------------------------------------------------
 !              !  file name      ! frequency (hours) ! variable  ! time interp.!  clim   ! 'yearly'/ ! weights  ! rotation ! land/sea mask !
 !              !                 !  (if <0  months)  !   name    !  (logical)  !  (T/F ) ! 'monthly' ! filename ! pairing  ! filename      !
-   bn_ssh      = 'SEAsia_CMEMS_gebco_bt_bdyT', 24      , 'sossheig',    .true.   , .false. ,  'monthly'  ,    ''    ,   ''     ,     ''
-   bn_u2d      = 'SEAsia_CMEMS_gebco_bdyU',  24        , 'vobtcrtx',    .true.   , .false. ,  'monthly'  ,    ''    ,   ''     ,     ''
-   bn_v2d      = 'SEAsia_CMEMS_gebco_bdyV',  24        , 'vobtcrty',    .true.   , .false. ,  'monthly'  ,    ''    ,   ''     ,     ''
-   bn_u3d      = 'SEAsia_CMEMS_gebco_bdyU'   24        , 'vozocrtx',    .true.   , .false. ,  'monthly'  ,    ''    ,   ''     ,     ''
-   bn_v3d      = 'SEAsia_CMEMS_gebco_bdyV'   24        , 'vomecrty',    .true.   , .false. ,  'monthly'  ,    ''    ,   ''     ,     ''
-   bn_tem      = 'SEAsia_CMEMS_gebco_bdyT'   24        , 'votemper',    .true.   , .false. ,  'monthly'  ,    ''    ,   ''     ,     ''
-   bn_sal      = 'SEAsia_CMEMS_gebco_bdyT'   24        , 'vosaline',    .true.   , .false. ,  'monthly'  ,    ''    ,   ''     ,     ''
+   bn_ssh      = 'SEAsia_CMEMS_bt_bdyT', 24      , 'sossheig',    .true.   , .false. ,  'monthly'  ,    ''    ,   ''     ,     ''
+   bn_u2d      = 'SEAsia_CMEMS_bdyU',  24        , 'vobtcrtx',    .true.   , .false. ,  'monthly'  ,    ''    ,   ''     ,     ''
+   bn_v2d      = 'SEAsia_CMEMS_bdyV',  24        , 'vobtcrty',    .true.   , .false. ,  'monthly'  ,    ''    ,   ''     ,     ''
+   bn_u3d      = 'SEAsia_CMEMS_bdyU'   24        , 'vozocrtx',    .true.   , .false. ,  'monthly'  ,    ''    ,   ''     ,     ''
+   bn_v3d      = 'SEAsia_CMEMS_bdyV'   24        , 'vomecrty',    .true.   , .false. ,  'monthly'  ,    ''    ,   ''     ,     ''
+   bn_tem      = 'SEAsia_CMEMS_bdyT'   24        , 'votemper',    .true.   , .false. ,  'monthly'  ,    ''    ,   ''     ,     ''
+   bn_sal      = 'SEAsia_CMEMS_bdyT'   24        , 'vosaline',    .true.   , .false. ,  'monthly'  ,    ''    ,   ''     ,     ''
 
    cn_dir      = '/work/n01/n01/annkat/SEAsia_ERSEM_CMEMS/BOUNDARY_FORCING/2017/' !  root directory for the location of the bulk files
    ln_full_vel = .true.   ! If true NEMO takes the 3d velocities as bt+bc 
