@@ -10,6 +10,7 @@ mv trunk_NEMOGCM_r8395/NEMO/TOP_SRC trunk_NEMOGCM_r8395/NEMO/TOP_SRC_old
 #original NEMO-FABM coupler can be found form here: https://github.com/NOC-MSM/NEMO_ERSEM/tree/master/TOP_SRC_r8395_FABM 
 cp -r $GITCLONE/NEMO-FABM-ERSM/TOP_SRC_r8395_FABM trunk_NEMOGCM_r8395/NEMO/TOP_SRC
 
+cd $WDIR
 # get ERSM
 cp -r $GITCLONE/NEMO-FABM-ERSM/ERSEM-master ./
 
@@ -32,11 +33,12 @@ module load cmake
 
 cd $FABM
 
-cmake $FABM/fabm/src -DFABM_HOST=nemo -DCMAKE_Fortran_COMPILER=ifort -DFABM_ERSEM_BASE=$NEMO/ERSEM-master -DFABM_EMBED_VERSION=ON
+cmake $FABM/fabm/src -DFABM_HOST=nemo -DCMAKE_Fortran_COMPILER=ifort -DFABM_ERSEM_BASE=$WDIR/ERSEM-master -DFABM_EMBED_VERSION=ON
 
 make install
-cp -r /home/n01/n01/$USER/local/fabm/nemo/lib ./
-cp -r /home/n01/n01/$USER/local/fabm/nemo/include ./
+#change the directory you installed fabm to your directory
+cp -r /home/n01/n01/annkat/local/fabm/nemo/lib ./
+cp -r /home/n01/n01/annkat/local/fabm/nemo/include ./
 #################################################################
 
 #compile nemo
