@@ -35,8 +35,8 @@ cd $FABM
 cmake $FABM/fabm/src -DFABM_HOST=nemo -DCMAKE_Fortran_COMPILER=ifort -DFABM_ERSEM_BASE=$NEMO/ERSEM-master -DFABM_EMBED_VERSION=ON
 
 make install
-cp -r /home/n01/n01/$user/local/fabm/nemo/lib ./
-cp -r /home/n01/n01/$user/local/fabm/nemo/include ./
+cp -r /home/n01/n01/$USER/local/fabm/nemo/lib ./
+cp -r /home/n01/n01/$USER/local/fabm/nemo/include ./
 #################################################################
 
 #compile nemo
