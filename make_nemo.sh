@@ -50,7 +50,7 @@ cd $CDIR
 printf 'y\nn\nn\ny\nn\nn\nn\nn\n' |./makenemo -m XC_ARCHER_INTEL_FABM -n $CONFIG -j 0
 
 #changes the keys and copy MY_SRC to your configurations
-cd $CONFIG
+cd $CDIR/$CONFIG
 cp $GITCLONE/NEMO-FABM-ERSM/cpp_SEAsia_FABM.fcm cpp_$CONFIG.fcm
 cp -r -f $GITCLONE/NEMO-FABM-ERSM/MY_SRC ./
 
