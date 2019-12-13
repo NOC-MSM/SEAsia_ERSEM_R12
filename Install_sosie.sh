@@ -1,4 +1,11 @@
 cd ~
+
+#load modules
+module swap PrgEnv-cray PrgEnv-intel
+module unload nco cray-netcdf cray-hdf5
+module load cray-netcdf-hdf5parallel/4.4.1.1
+module load cray-hdf5-parallel/1.10.0.1
+
 mkdir local
 mkdir sosie
 #attention use 2.6 version or 3.0 version
