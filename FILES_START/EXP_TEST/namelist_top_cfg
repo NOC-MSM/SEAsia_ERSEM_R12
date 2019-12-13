@@ -104,12 +104,12 @@
 !-----------------------------------------------------------------------
 &namtrc_ldf    !   lateral diffusion scheme for passive tracer
 !-----------------------------------------------------------------------
-   ln_trcldf_lap    =  .false. ! slwa .true.   !     laplacian operator
+   ln_trcldf_lap    =  .true. ! slwa .true.   !     laplacian operator
    ln_trcldf_blp    =  .false.  !     bilaplacian operator
                                 !  Direction of action  :
    ln_trcldf_lev    =  .false.  !     iso-level
-   ln_trcldf_hor    =  .true.   !     horizontal (geopotential)         (require "key_ldfslp" when ln_sco=T)
-   ln_trcldf_iso    =  .false.  !     iso-neutral                       (require "key_ldfslp")
+   ln_trcldf_hor    =  .false.   !     horizontal (geopotential)         (require "key_ldfslp" when ln_sco=T)
+   ln_trcldf_iso    =  .true.  !     iso-neutral                       (require "key_ldfslp")
 !                               !  Coefficient
    rn_ahtrc_0       =  50 ! slwa 2000.    !  horizontal eddy diffusivity for tracers [m2/s]
    rn_bhtrc_0       =     0.    !     background eddy diffusivity for ldf_iso [m2/s]
