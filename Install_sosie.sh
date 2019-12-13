@@ -11,6 +11,9 @@ cd sosie
 # to add the directory to install binaries
 cp $GITCLONE/IC/make.macro make.macro
 
+# Directory to install binaries:
+INSTALL_DIR = /home/n01/n01/annkat/local
+
 make
 make install
 
